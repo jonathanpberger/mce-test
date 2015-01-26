@@ -17,3 +17,14 @@ h1, h2, h3 {
 .remark-inline-code { 
 	font-family: 'Ubuntu Mono'; 
 }
+
+/* ###### Custom Styles */
+
+body { 
+	font-family: 'Helvetica'
+}
+
+h1, h2, h3 {
+  font-family: 'Helvetica';
+  font-weight: bold;
+}
