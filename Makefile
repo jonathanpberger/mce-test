@@ -14,6 +14,6 @@ highlighter:
 	node make highlighter
 
 run:
-	python3 -m http.server && open index.html
-
+	python3 -m http.server
+	
 .PHONY: deps test bundle highlighter
