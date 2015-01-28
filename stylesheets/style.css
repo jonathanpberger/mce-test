@@ -3,6 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,400,900);
 
 body { 
 	font-family: 'Droid Serif'
@@ -27,4 +28,40 @@ body {
 h1, h2, h3 {
   font-family: 'Helvetica';
   font-weight: bold;
+}
+
+.footer {	
+	font-family: 'Lato';
+	font-weight: 100;
+	position: absolute;
+	height: 75px;
+	bottom: 0;
+	width: 100%;
+  background-color: #2a2;
+	z-index: 99;
+	background-image: url("../images/bottom_pres.jpg");
+	background-repeat: no-repeat;
+	background-position: left top;
+	color: white;
+	padding: 18px 36px;
+}
+
+.footer a,
+.footer a:visited {
+	text-decoration: none;
+	color: white;
+	text-align: center;
+}
+
+.footer .left {
+	position: absolute;
+	left: 0;
+	
+}
+.footer .center {
+	
+}
+.footer .right {
+	position: absolute;
+	right: 0;
 }
