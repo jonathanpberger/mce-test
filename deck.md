@@ -1,51 +1,46 @@
 # Hi!
 
-This is a sample presentation. 
+---
 
-- You can press "p" at any time to open the Presentation Console.
-- Notes can be seen in the Presentation Console. Write them after three question marks in a row, e.g.
+# Notes from UX Sketch Camp
 
-```
-    ???
-    This is a note.
-```
+- Talk -> never given
+
+- how do I practice?
+
+- New Idea...I dho'nt have practice
+
+- Q: content tricky or stories?
+
+- A: How do we know when design phase is done?
+
+## Testing Pyramid
+- 1 Acceptance test for every
+- 10 Intergration tests, for every
+- 100 Unit tests
+
+Test driven engineering
+
+What's the design version of the testing pyramid?
+Sketching?
+Common language of done
+holy grail
+looking at design as a series of experiments
+more than just pretty pictures
+
+75% spot-on
+10% crazy
+15% eh
 
 ---
 
-# Gettysburg Cemetery Dedication
-Abraham Lincoln
-11/19/1863
 
-???
-
-Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
 
 ---
 
-## Agenda
-- Met on battlefield (great)
-- Dedicate portion of field - fitting!
-- Unfinished work (great tasks)
+results: 
+CI for design
 
----
-
-## Not on Agenda
-1. Dedicate
-2. Consecrate
-3. Hallow (in narrow sense)
-4. Add or detract
-5. Note or remember what we say
-
----
-
-## Review of key objectives and Critical Success factors
-- What makes nation unique
-	- Conceived in Liberty
-	- Men are equal
-
-- Shared vision
-	- New birth of freedom
-	- Gov't of/for/by the people
 
 ---
 
