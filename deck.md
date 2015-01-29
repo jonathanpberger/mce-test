@@ -1,28 +1,34 @@
+title: foo
+name: bar
+
+class: center, middle, inverse
+
 **Hi :-)**
 
 ---
 
-# Mobile Central Europe Conf, Warsaw
-
-Jonathan Berger, 2015
-
----
+class: center, middle
 
 # Towards a Theory of Test-Driven Design
+Jonathan Berger, 2015
+
+Mobile Central Europe Conf, Warsaw
 
 ---
 
-**or**
+class: center, middle, inverse
 
----
-
+.small[
+**or**]
 ***A Proposed program for Automated Testing in Design***
 
 ---
 
+
 **Who Am I?**
 
-- ~25 projects
+- @jonathanpberger
+- ~30 agile projects since 2008
 - design, code, pm
 - interested in agile practice for design
 
@@ -30,11 +36,11 @@ Jonathan Berger, 2015
 
 # What it says on the tin
 
+.small[
 > Years ago, Developers had problems and devised Agile techniques to address them. Today, Desingers face similar problems. Can we adopt similar techniques? In this talk, we’ll explore what automated testing might look like for design. What would it look like to have a more defined definition of “done” for design? What if designers could refactor with impunity? We’ll explore testing possibilities for Visual design, User Experience design, and front-end engineering, and try to build a testing pyramid for design.
+]
 
 ---
-
-
 
 # Designers have Problems
 
@@ -54,8 +60,10 @@ Jonathan Berger, 2015
 ***automated testing techniques***
 **to protect their work.**
 
-
 ---
+
+class: center, middle, inverse
+
 
 ## What might automated testing look like for design?
 
@@ -63,9 +71,6 @@ Jonathan Berger, 2015
 ---
 
 **What would it look like to have a more defined definition of "done" for design?**
-
-
----
 
 **What if designers could refactor with impunity?**
 
@@ -84,6 +89,8 @@ and
 **try to build a testing pyramid for design.**
 
 ---
+class: center, middle, inverse
+
 
 ***20 yrs ago***
 
@@ -154,17 +161,18 @@ Unit
 
 # Design Testing Pyramid
 
-## Assert Design Decisions (cactus)
-## Control Regressions (green_onion)
-## Safely refactor bloated CSS (CSS Racionator)
-## Enforce Code Conventions (CSS Lint)
-## Enforce personas (persona_dot_yml)
-## Enforce Styleguide-Driven Development (style_cop)
+- Assert Design Decisions (cactus)
+- Control Regressions (green_onion)
+- Safely refactor bloated CSS (CSS Racionator)
+- Enforce Code Conventions (CSS Lint)
+- Enforce personas (persona_dot_yml)
+- Enforce Styleguide-Driven Development (style_cop)
 
 
 ---
 
 <!-- not sure where this goes -->
+# I.N.V.E.S.T.
 
 Independent: maybe?
 Negotiable: yes!
