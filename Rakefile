@@ -1,13 +1,13 @@
-desc "Watch, then open"
+desc "Watch, then open using stylesheet jpb"
 task :watch => :open do
   puts "Watching your presentation, updating deck/index.html"
-  exec "mdpress --automatic deck.md --stylesheet jpb"
+  exec "mdpress --automatic deck.md --stylesheet mce"
 end
 
 desc "Build your presentation from `deck.md` with mdpress."
 task :build do
   puts "Building your presentation at deck/index.html"
-  `mdpress deck.md --stylesheet jpb`
+  `mdpress deck.md --stylesheet mce`
 end
 
 desc "Build your presentation from `deck.md` using stock styling."
