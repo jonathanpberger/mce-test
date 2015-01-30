@@ -74,6 +74,10 @@ class: center, middle, inverse
 
 **What if designers could refactor with impunity?**
 
+---
+
+# The Solution: TDD for Design
+
 
 ---
 
@@ -89,14 +93,16 @@ and
 **try to build a testing pyramid for design.**
 
 ---
-class: center, middle, inverse
 
+# Interlude: Why Do I Care?
 
-***20 yrs ago***
+- origin story
+- background on this talk: tried to give it before, but wasn't ready
+ 
 
 ---
 
-## Software development had problems
+# Software development had problems
 
 - Sclerosis around processes and tools,
 - Compulsive (CYA) documentation,
@@ -105,19 +111,47 @@ class: center, middle, inverse
 
 ---
 
-## What is design?
+# What is design?
 
 (people ask "did you design that shirt?")
 
 ---
 
-## What is Test-Driven Development?
+# /END interlude/context
+
+---
+
+So...
+
+# What is TDD?
+
+
+---
+
+# TDD: History
+
+- "rediscovered" by Kent Beck
+- Red / Green / Refactor
+
+<http://www.quora.com/Why-does-Kent-Beck-refer-to-the-rediscovery-of-test-driven-development>
+<http://derekbarber.ca/blog/2012/03/27/why-test-driven-development/>
+
+---
+
+# TDD: Benefits
+
+> Kent Beck, who is credited with having developed or 'rediscovered'[1] the technique, stated in 2003 that TDD encourages simple designs and inspires confidence.[2] -<http://en.wikipedia.org/wiki/Test-driven_development>
+
+- 
+
+
+# What is Test-Driven Development?
 - benefits
 - technique
 
 ---
 
-### Benefits
+## Benefits of TDD
 
 Paul Wilson [says](http://www.neo.com/2014/03/20/the-many-faces-of-test-driven-development):
 
@@ -133,14 +167,22 @@ Paul Wilson [says](http://www.neo.com/2014/03/20/the-many-faces-of-test-driven-d
 
 ---
 
-### Technique
+## TDD Technique
 - Red
 - Green
 - Refactor
 
 ---
 
-## What is Test-Driven Design?
+# TDD: An example
+
+tell hamazon story
+
+
+
+---
+
+# What is Test-Driven Design?
 - benefits
 - technique
 
@@ -171,8 +213,8 @@ Unit
 
 ---
 
-<!-- not sure where this goes -->
-# I.N.V.E.S.T.
+<!-- not sure where this goes ; do we need to talk about storywriting? maybe storymaypping?-->
+## I.N.V.E.S.T.
 
 Independent: maybe?
 Negotiable: yes!
@@ -183,8 +225,9 @@ Testable: working on that now
 
 ---
 
-# 99 (Hypo)theses
+# 99 (Hypo)theses about Design Fears
 not sure if this is part of the talk, a new version of the talk, or what. But I shuold go with it for a little while.
+// maybe the dev part goes up in the bg on TDD, and the design parts can set up moving from TDD -> TDDesign
 
 ---
 
@@ -198,7 +241,7 @@ We believe designers have a problem
 
 We can help them with 
 
-*a tool that provides for refactoring CSS with impunity.*
+## a tool that provides for refactoring CSS with impunity.
 
 We'll know we're right 
 
@@ -206,19 +249,29 @@ We'll know we're right
 
 ---
 
-We believe designers suffer from unintended design regressions (especially in responsive designs) when changes in one part of the codebase unexpectedly affect another. We can help them with a tool that craws the whole app and announces if anything's changed.
+We believe designers suffer from 
+
+## unintended design regressions 
+
+(especially in responsive designs) when changes in one part of the codebase unexpectedly affect another. 
+
+We can help them with a tool that craws the whole app and announces if anything's changed.
 
 ---
 
 
-We believe designers suffer from the *fear* of unintended design regressions, never being 100% certain that new changes haven't broken old styling.
+We believe designers suffer from the 
+
+## *fear* of unintended design regressions, 
+
+never being 100% certain that new changes haven't broken old styling.
 
 ---
 
 
 *We believe*
 
-designers have trouble defining "done", which makes it hard to set expectations, to communicate with teams, and to manage their own work. 
+## designers have trouble defining "done", which makes it hard to set expectations, to communicate with teams, and to manage their own work. 
 
 *We can fix this *
 
@@ -311,47 +364,6 @@ expression: final app
 ---
 
 ---
-# Hi!
-
-- I'm @jonathanpberger
-- I use Git every day to make stuff at @pivotallabs
-- My background is in philosophy and then design and now development
-
-
----
-## Who are you?
-Show of hands:
-
-- Who's used any version control before?
-- Who's used git before?
-- Who uses the terminal regularly?
-
-
-
----
-# The Plan
-- 40m to Speed through a *ton* of material.
-- Try to show actual use and common workflows. No time to be exhaustive
-- This will be a live-coded technical talk.
-
-
----
-
-- Act 1 - Solo Git & Heroku
-- Act 2 - Team Git
-- Act 3 - Setting-up, links to more
-
----
-
-
-# What
-
-# Why
-
-# Experience so far
-
-
----
 
 # Notes from UX Sketch Camp
 
@@ -389,6 +401,7 @@ more than just pretty pictures
 - CI for design
 - Design Testing Pyramid
 - Gherkin-driven mockups
+- style-guide driven design
 
 ---
 
