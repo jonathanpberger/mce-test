@@ -318,8 +318,8 @@ span,strong {
 
 .footer .mce-logo {
   position: absolute;
-  left: 1%;
-  bottom: 1%;
+  left: 2%;
+  top: 20%;
 }
 
 .footer .guest-logo {
@@ -344,5 +344,6 @@ span,strong {
   text-align: right;
   bottom: 33%;
   width: 100%;
+	right: 2%;
 }
 
