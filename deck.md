@@ -117,7 +117,9 @@ So...
 
 ---
 
-## TDD: History // TODO: EXPAND THIS
+## TDD: History
+
+<!-- TODO: EXPAND THIS -->
 
 - "rediscovered" by Kent Beck
 -  mainframe era
@@ -160,7 +162,7 @@ So...
 
 ---
 
-![hamazon_item_page.png]
+!["images/hamazon_item_page.png"]
 
 ---
 
@@ -206,11 +208,19 @@ looks a lot like regular English, but with a few magic words:
 
 ---
 
-run the test. What happens?
+### run the test. What happens?
 
-- `Given I'm a logged-in User`...Let's say by this point we've already written the User login system, so that line goes green.
-- `When I go to the Item Page`...And let's say we've already written the Item Page, so that line goes green.
-- `And I tap the "Add Item to Cart" button`—there *is* no "Add Item to Cart" button, so that should fail.
+.green[`Given I'm a logged-in User`]
+
+<!-- (Let's say by this point we've already written the User login system, so that line goes green.)  -->
+
+.green[`When I go to the Item Page`]
+
+<!-- (...And let's say we've already written the Item Page, so that line goes green.)  -->
+
+.red[`And I tap the "Add Item to Cart" button`]
+
+<!-- (there is no "Add Item to Cart" button, so that should fail.)  -->
 
 <!-- TODO: create "red" and "green" classes -->
 

@@ -124,3 +124,11 @@ code {
   opacity: 0.2;
   z-index: 999;
 }
+
+.green {
+	color: #859900;
+}
+
+.red {
+	color: #dc322f;
+}

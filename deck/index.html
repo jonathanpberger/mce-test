@@ -185,7 +185,9 @@
 </div>
       <div class='step' >
     
-<h2>TDD: History // TODO: EXPAND THIS</h2>
+<h2>TDD: History</h2>
+
+<!-- TODO: EXPAND THIS -->
 
 <ul>
 <li>&quot;rediscovered&quot; by Kent Beck</li>
@@ -235,7 +237,7 @@
 </div>
       <div class='step' >
     
-<p>![hamazon<em>item</em>page.png]</p>
+<p>![&quot;images/hamazon<em>item</em>page.png&quot;]</p>
 </div>
       <div class='step' >
     
@@ -284,13 +286,19 @@
 </div>
       <div class='step' >
     
-<p>run the test. What happens?</p>
+<h3>run the test. What happens?</h3>
 
-<ul>
-<li><code class='inline prettyprint'>Given I'm a logged-in User</code>...Let&#39;s say by this point we&#39;ve already written the User login system, so that line goes green.</li>
-<li><code class='inline prettyprint'>When I go to the Item Page</code>...And let&#39;s say we&#39;ve already written the Item Page, so that line goes green.</li>
-<li><code class='inline prettyprint'>And I tap the "Add Item to Cart" button</code>—there <em>is</em> no &quot;Add Item to Cart&quot; button, so that should fail.</li>
-</ul>
+<p>.green[<code class='inline prettyprint'>Given I'm a logged-in User</code>]</p>
+
+<!-- (Let's say by this point we've already written the User login system, so that line goes green.)  -->
+
+<p>.green[<code class='inline prettyprint'>When I go to the Item Page</code>]</p>
+
+<!-- (...And let's say we've already written the Item Page, so that line goes green.)  -->
+
+<p>.red[<code class='inline prettyprint'>And I tap the "Add Item to Cart" button</code>]</p>
+
+<!-- (there is no "Add Item to Cart" button, so that should fail.)  -->
 
 <!-- TODO: create "red" and "green" classes -->
 </div>
