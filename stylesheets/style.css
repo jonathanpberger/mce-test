@@ -30,40 +30,40 @@ h1, h2, h3 {
   font-weight: bold;
 }
 
-.footer {	
-	font-family: 'Lato';
-	font-weight: 100;
+.remark-slide-footer {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
 	position: absolute;
-	height: 75px;
-	bottom: 0;
-	width: 100%;
-  background-color: #2a2;
-	z-index: 99;
-	background-image: url("../images/bottom_pres.jpg");
-	background-repeat: no-repeat;
-	background-position: left top;
-	color: white;
-	padding: 18px 36px;
+  bottom: 0;
+  background-color: #222;
+  color: #fcfcfc;
+  width: 100%;
+  margin: -1em -4em; /*counteract padding on top element */
+  height: 4em;
+  line-height: 4em;
 }
 
 .footer a,
 .footer a:visited {
 	text-decoration: none;
-	color: white;
-	text-align: center;
+	color: #fcfcfc;
 }
 
-.footer .left {
+.remark-slide-footer .logo {
 	position: absolute;
-	left: 0;
+	left: 1em;
 	
 }
-.footer .center {
+.remark-slide-footer .twitter {
+  position: absolute;
+  left: 44%;
+  line-height: 3em;
 	
 }
-.footer .right {
+.remark-slide-footer .hashtag {
 	position: absolute;
-	right: 0;
+	right: 1em;
+  line-height: 3em;
 }
 
 /************************** from view-source:http://joshbode.github.io/remark/ansi.html#1*/
