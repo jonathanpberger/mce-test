@@ -9,13 +9,7 @@ Mobile Central Europe, Warsaw
 
 ---
 
-**or:**
-***A Proposed program for Automated Testing in Design***
-
----
-
-
-**Who Am I?**
+## Who Am I?
 
 - @jonathanpberger
 - ~30 agile projects since 2008
@@ -23,6 +17,7 @@ Mobile Central Europe, Warsaw
 - interested in agile practice for design
 
 ---
+
 ## Who are you?
 Show of hands:
 
@@ -32,13 +27,22 @@ Show of hands:
 
 ---
 
-# What it says on the tin
+## What it says on the tin
 
 > Years ago, Developers had problems and devised Agile techniques to address them. Today, Desingers face similar problems. Can we adopt similar techniques? In this talk, we’ll explore what automated testing might look like for design. What would it look like to have a more defined definition of “done” for design? What if designers could refactor with impunity? We’ll explore testing possibilities for Visual design, User Experience design, and front-end engineering, and try to build a testing pyramid for design.
 
 ---
 
-# Designers have Problems
+# The Plan
+-
+
+---
+
+# Problems
+
+---
+
+## Designers have Problems
 
 ---
 
@@ -73,7 +77,11 @@ Show of hands:
 
 ---
 
-In this talk we'll explore testing possibilities for
+In this talk we'll explore
+
+## possible testing-based solutions
+
+for
 
 - Visual design,
 - User Experience design, and
@@ -82,34 +90,24 @@ In this talk we'll explore testing possibilities for
 ---
 
 and
-**try to build a testing pyramid for design.**
+## try to build a testing pyramid for design.
 
 ---
 
-# Interlude: Why Do I Care?
+# <Interlude>: Why Do I Care?
 
-- origin story
-- background on this talk: tried to give it before, but wasn't ready
- 
-
----
-
-# Software development had problems
-
-- Sclerosis around processes and tools,
-- Compulsive (CYA) documentation,
-- Endless negotiation about targets and deliverables,
-- A fixation on following an old plan in a new situation.
+## origin story
+## background on this talk: tried to give it before, but wasn't ready
 
 ---
 
-# What is design?
+## What is design?
 
 (people ask "did you design that shirt?")
 
 ---
 
-# /END interlude/context
+# </EndInterlude>
 
 ---
 
@@ -117,13 +115,13 @@ So...
 
 # What is TDD?
 
-
 ---
 
-# TDD: History
+## TDD: History // TODO: EXPAND THIS
 
 - "rediscovered" by Kent Beck
-- Red / Green / Refactor
+-  mainframe era
+- XP Explained - modern history
 
 <http://www.quora.com/Why-does-Kent-Beck-refer-to-the-rediscovery-of-test-driven-development>
 <http://derekbarber.ca/blog/2012/03/27/why-test-driven-development/>
@@ -134,28 +132,20 @@ So...
 
 > Kent Beck, who is credited with having developed or 'rediscovered'[1] the technique, stated in 2003 that TDD encourages simple designs and inspires confidence.[2] -<http://en.wikipedia.org/wiki/Test-driven_development>
 
-- 
-
-
-# What is Test-Driven Development?
-- benefits
-- technique
 
 ---
 
 ## Benefits of TDD
 
-Paul Wilson [says](http://www.neo.com/2014/03/20/the-many-faces-of-test-driven-development):
-
-> For me, TDD's benefits are:
-
 > - It gives me **confidence** that my code does what I think it does
 
 > - It confers the **ability to refactor** code without the fear that I have broken something
 
-> - It encourages a testable, and hence modular, **design**
+> - It encourages a testable, and hence **modular, design**
 
 > - The **tests describe the behaviour** of the code
+
+[Paul Wilson](http://www.neo.com/2014/03/20/the-many-faces-of-test-driven-development)
 
 ---
 
@@ -166,11 +156,126 @@ Paul Wilson [says](http://www.neo.com/2014/03/20/the-many-faces-of-test-driven-d
 
 ---
 
-# TDD: An example
+# A TDD example: Hamazon.com
 
-tell hamazon story
+---
+
+![hamazon_item_page.png]
+
+---
+
+**Let's say we're Pair Programming...**
+
+---
+
+Our story is
+
+**`User should be able to add Item to Shopping Cart`**
+
+---
+
+## Gherkin
+
+looks a lot like regular English, but with a few magic words:
+
+- **"Given",** 
+- **"When",** 
+- **"And",** 
+- **"Then".**
+
+---
+
+### The Test
+
+		Given I'm a logged-in User
+		
+		When I go to the Item Page
+		
+		And I tap the "Add Item to Cart" button
+		
+		Then I should see the Cart Inventory increment
+		
+		And I should see the Cart Sub-Total increment
+		
+		And I should see the Warehouse Inventory decrement
+
+---
+
+- readable by the computer
+- each line will fail or pass individually.
+
+---
+
+run the test. What happens?
+
+- `Given I'm a logged-in User`...Let's say by this point we've already written the User login system, so that line goes green.
+- `When I go to the Item Page`...And let's say we've already written the Item Page, so that line goes green.
+- `And I tap the "Add Item to Cart" button`—there *is* no "Add Item to Cart" button, so that should fail.
+
+<!-- TODO: create "red" and "green" classes -->
+
+---
+
+- go into the part of the codebase which has front-end HTML views, 
+- find the Item Page, and 
+- add `<button>Add Item to Cart</button>`. 
+
+---
+
+*That's it.* 
+<!-- 
+???
+No mucking with the database. The button isn't hooked up to anything. All we're trying to do is make the test pass, line by line.
+ -->
+
+---
+
+run the test again:
+`Given I'm a logged-in User`...GREEN!
+`When I go to the Item Page`...GREEN!
+`And I tap the "Add Item to Cart" button`...now that'll be green too!
+`Then I should see the Cart Inventory increment` will fail. 
+
+---
+
+wire the `<button>` you just made in the front-end view up to the database, so that the Cart Inventory increments. 
+	
+---
+	
+Then we'll run the test again, the `Cart Inventory` line will pass, then next line (`Cart Sub-Total`) will fail, you'll make it pass, etc. etc. 
+
+---
+
+In this manner, the whole feature will be written according to a plain-Engish User Story that anyone can read—including a non-technical Product Manager or client stakeholder—without any over-engineering or extra work.
+
+---
+
+### Running Suite
+
+<!--
+???
+Now here's the fun part. Remember how we said we already built the User Login system and the Item Page? Those features will have tests too. In fact, close to 100% of the codebase is under test. So now that we've TDD'd a new feature and it's test is green, we'll run the entire Test Suite—every test that's been written to date. We already know that our feature works on its own, but now we'll get to see whether it integrates with the rest of the software.
+-->
+
+---
 
 
+
+We'll kick off the full test run, and it'll take a few minutes to run all the tests. Now's a great time to get up, stretch our legs, grab a drink, maybe play a game of ping pong. When we return, the test suite is red! It turns out that when we decremented Warehouse Inventory, we broke part of the warehouse management system that had already been written. Now we'll go fix our code (writing additional tests as necessary) and repeat the process until the test suite is green. Once suite is green, we can push our code to production with confidence that the software will act as expected. In this manner, we mitigate technical risks and let deployment be a purely business decision.
+
+
+
+# <Interlude>: TDD & Pairing
+
+---
+
+## Ping Pong Pairing
+- How does it work?
+- how would TDD help Design Pairing?
+
+---
+
+# </End Interlude>
 
 ---
 
@@ -205,15 +310,15 @@ Unit
 
 ---
 
-<!-- not sure where this goes ; do we need to talk about storywriting? maybe storymaypping?-->
+<!-- not sure where this goes ; do we need to talk about storywriting? maybe storymapping?-->
 ## I.N.V.E.S.T.
 
-Independent: maybe?
-Negotiable: yes!
-Valuable: yes!
-Estimatable: in theory, yes
-Small: maybe?
-Testable: working on that now
+- Independent: maybe?
+- Negotiable: yes!
+- Valuable: yes!
+- Estimatable: in theory, yes
+- Small: maybe?
+- Testable: working on that now
 
 ---
 
@@ -227,34 +332,34 @@ not sure if this is part of the talk, a new version of the talk, or what. But I 
 
 ---
 
-We believe designers have a problem 
+We believe designers have a problem
 
 *refactoring the messes of CSS that metastasize once a project gets past the early phases.*
 
-We can help them with 
+We can help them with
 
 ## a tool that provides for refactoring CSS with impunity.
 
-We'll know we're right 
+We'll know we're right
 
 *if Latter-Day Stylesheets become less of a problem (we can test this on our own codebases).*
 
 ---
 
-We believe designers suffer from 
+We believe designers suffer from
 
-## unintended design regressions 
+## unintended design regressions
 
-(especially in responsive designs) when changes in one part of the codebase unexpectedly affect another. 
+(especially in responsive designs) when changes in one part of the codebase unexpectedly affect another.
 
 We can help them with a tool that craws the whole app and announces if anything's changed.
 
 ---
 
 
-We believe designers suffer from the 
+We believe designers suffer from the
 
-## *fear* of unintended design regressions, 
+## *fear* of unintended design regressions,
 
 never being 100% certain that new changes haven't broken old styling.
 
@@ -263,11 +368,11 @@ never being 100% certain that new changes haven't broken old styling.
 
 *We believe*
 
-## designers have trouble defining "done", which makes it hard to set expectations, to communicate with teams, and to manage their own work. 
+## designers have trouble defining "done", which makes it hard to set expectations, to communicate with teams, and to manage their own work.
 
 *We can fix this *
 
-with a practice of Test-Driven Design, where "done" can be INVESTED up-front. 
+with a practice of Test-Driven Design, where "done" can be INVESTED up-front.
 
 *We'll know we're right*
 
@@ -397,9 +502,13 @@ more than just pretty pictures
 
 ---
 
+# From TDD Lunch Talk
+
 ## The Pain
 - Conversation started w/ numerical formatting: neg numbers red w/ parens, positive numbers w/ green, etc (cactus would fix this)
 - layout broke w/ an experimental class leaking out to another DOM element, absolute positioning broke a page (GO would fix this)
+
+---
 
 ## The Plan
 - spike on a screenshotting tool wraith / GO (try graham's branch) / huxley and choose one
@@ -407,6 +516,8 @@ more than just pretty pictures
 - put the Design Build onto the CI board
 - put Acknowledger page under screenshotting test
 - report back to Automated Design Test Working Group
+
+---
 
 # Goals / Benefits
 
@@ -422,8 +533,12 @@ Automated design testing can address a number of design pains, e.g.:
 - ensure modules are implemented w/ proper DOM
 - explicitly assert design decisions
 
-# Risks
+---
+
+## Risks
 - adding overhead to team flow
+
+---
 
 ## Errata
 - How to connect to (live?) styleguide?
@@ -438,8 +553,12 @@ Automated design testing can address a number of design pains, e.g.:
 - "Catastrophic cactus test": assert against total failure, e.g. cards collapsing to 0 width.
 - TDD w/ GO: create a mock in the browser w/ firebug, use it as the reference for GO to run against
 
+---
+
 ## TODO
 - send Github image diffing to Interesting
+
+---
 
 # Resources
 [capybara-accessible]: https://github.com/Casecommons/capybara-accessible

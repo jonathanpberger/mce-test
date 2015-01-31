@@ -64,12 +64,7 @@
 </div>
       <div class='step' >
     
-<p><strong>or:</strong>
-<strong><em>A Proposed program for Automated Testing in Design</em></strong></p>
-</div>
-      <div class='step' >
-    
-<p><strong>Who Am I?</strong></p>
+<h2>Who Am I?</h2>
 
 <ul>
 <li>@jonathanpberger</li>
@@ -92,7 +87,7 @@
 </div>
       <div class='step' >
     
-<h1>What it says on the tin</h1>
+<h2>What it says on the tin</h2>
 
 <blockquote>
 <p>Years ago, Developers had problems and devised Agile techniques to address them. Today, Desingers face similar problems. Can we adopt similar techniques? In this talk, we’ll explore what automated testing might look like for design. What would it look like to have a more defined definition of “done” for design? What if designers could refactor with impunity? We’ll explore testing possibilities for Visual design, User Experience design, and front-end engineering, and try to build a testing pyramid for design.</p>
@@ -100,7 +95,17 @@
 </div>
       <div class='step' >
     
-<h1>Designers have Problems</h1>
+<h1>The Plan</h1>
+
+<h2></h2>
+</div>
+      <div class='step' >
+    
+<h1>Problems</h1>
+</div>
+      <div class='step' >
+    
+<h2>Designers have Problems</h2>
 </div>
       <div class='step' >
     
@@ -136,7 +141,11 @@
 </div>
       <div class='step' >
     
-<p>In this talk we&#39;ll explore testing possibilities for</p>
+<p>In this talk we&#39;ll explore</p>
+
+<h2>possible testing-based solutions</h2>
+
+<p>for</p>
 
 <ul>
 <li>Visual design,</li>
@@ -146,38 +155,27 @@
 </div>
       <div class='step' >
     
-<p>and
-<strong>try to build a testing pyramid for design.</strong></p>
-</div>
-      <div class='step' >
-    
-<h1>Interlude: Why Do I Care?</h1>
+<p>and</p>
 
-<ul>
-<li>origin story</li>
-<li>background on this talk: tried to give it before, but wasn&#39;t ready</li>
-</ul>
+<h2>try to build a testing pyramid for design.</h2>
 </div>
       <div class='step' >
     
-<h1>Software development had problems</h1>
+<h1><Interlude>: Why Do I Care?</h1>
 
-<ul>
-<li>Sclerosis around processes and tools,</li>
-<li>Compulsive (CYA) documentation,</li>
-<li>Endless negotiation about targets and deliverables,</li>
-<li>A fixation on following an old plan in a new situation.</li>
-</ul>
+<h2>origin story</h2>
+
+<h2>background on this talk: tried to give it before, but wasn&#39;t ready</h2>
 </div>
       <div class='step' >
     
-<h1>What is design?</h1>
+<h2>What is design?</h2>
 
 <p>(people ask &quot;did you design that shirt?&quot;)</p>
 </div>
       <div class='step' >
     
-<h1>/END interlude/context</h1>
+<h1></EndInterlude></h1>
 </div>
       <div class='step' >
     
@@ -187,11 +185,12 @@
 </div>
       <div class='step' >
     
-<h1>TDD: History</h1>
+<h2>TDD: History // TODO: EXPAND THIS</h2>
 
 <ul>
 <li>&quot;rediscovered&quot; by Kent Beck</li>
-<li>Red / Green / Refactor</li>
+<li> mainframe era</li>
+<li>XP Explained - modern history</li>
 </ul>
 
 <p><a href="http://www.quora.com/Why-does-Kent-Beck-refer-to-the-rediscovery-of-test-driven-development">http://www.quora.com/Why-does-Kent-Beck-refer-to-the-rediscovery-of-test-driven-development</a>
@@ -204,34 +203,21 @@
 <blockquote>
 <p>Kent Beck, who is credited with having developed or &#39;rediscovered&#39;[1] the technique, stated in 2003 that TDD encourages simple designs and inspires confidence.[2] -<a href="http://en.wikipedia.org/wiki/Test-driven_development">http://en.wikipedia.org/wiki/Test-driven_development</a></p>
 </blockquote>
-
-<ul>
-<li></li>
-</ul>
-
-<h1>What is Test-Driven Development?</h1>
-
-<ul>
-<li>benefits</li>
-<li>technique</li>
-</ul>
 </div>
       <div class='step' >
     
 <h2>Benefits of TDD</h2>
 
-<p>Paul Wilson <a href="http://www.neo.com/2014/03/20/the-many-faces-of-test-driven-development">says</a>:</p>
-
 <blockquote>
-<p>For me, TDD&#39;s benefits are:</p>
-
 <ul>
 <li><p>It gives me <strong>confidence</strong> that my code does what I think it does</p></li>
 <li><p>It confers the <strong>ability to refactor</strong> code without the fear that I have broken something</p></li>
-<li><p>It encourages a testable, and hence modular, <strong>design</strong></p></li>
+<li><p>It encourages a testable, and hence <strong>modular, design</strong></p></li>
 <li><p>The <strong>tests describe the behaviour</strong> of the code</p></li>
 </ul>
 </blockquote>
+
+<p><a href="http://www.neo.com/2014/03/20/the-many-faces-of-test-driven-development">Paul Wilson</a></p>
 </div>
       <div class='step' >
     
@@ -245,9 +231,132 @@
 </div>
       <div class='step' >
     
-<h1>TDD: An example</h1>
+<h1>A TDD example: Hamazon.com</h1>
+</div>
+      <div class='step' >
+    
+<p>![hamazon<em>item</em>page.png]</p>
+</div>
+      <div class='step' >
+    
+<p><strong>Let&#39;s say we&#39;re Pair Programming...</strong></p>
+</div>
+      <div class='step' >
+    
+<p>Our story is</p>
 
-<p>tell hamazon story</p>
+<p><strong><code class='inline prettyprint'>User should be able to add Item to Shopping Cart</code></strong></p>
+</div>
+      <div class='step' >
+    
+<h2>Gherkin</h2>
+
+<p>looks a lot like regular English, but with a few magic words:</p>
+
+<ul>
+<li><strong>&quot;Given&quot;,</strong> </li>
+<li><strong>&quot;When&quot;,</strong> </li>
+<li><strong>&quot;And&quot;,</strong> </li>
+<li><strong>&quot;Then&quot;.</strong></li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h3>The Test</h3>
+<pre><code class='prettyprint '>    Given I'm a logged-in User
+
+    When I go to the Item Page
+
+    And I tap the "Add Item to Cart" button
+
+    Then I should see the Cart Inventory increment
+
+    And I should see the Cart Sub-Total increment
+
+    And I should see the Warehouse Inventory decrement
+</code></pre></div>
+      <div class='step' >
+    
+<ul>
+<li>readable by the computer</li>
+<li>each line will fail or pass individually.</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<p>run the test. What happens?</p>
+
+<ul>
+<li><code class='inline prettyprint'>Given I'm a logged-in User</code>...Let&#39;s say by this point we&#39;ve already written the User login system, so that line goes green.</li>
+<li><code class='inline prettyprint'>When I go to the Item Page</code>...And let&#39;s say we&#39;ve already written the Item Page, so that line goes green.</li>
+<li><code class='inline prettyprint'>And I tap the "Add Item to Cart" button</code>—there <em>is</em> no &quot;Add Item to Cart&quot; button, so that should fail.</li>
+</ul>
+
+<!-- TODO: create "red" and "green" classes -->
+</div>
+      <div class='step' >
+    
+<ul>
+<li>go into the part of the codebase which has front-end HTML views, </li>
+<li>find the Item Page, and </li>
+<li>add <code class='inline prettyprint'><button>Add Item to Cart</button></code>. </li>
+</ul>
+</div>
+      <div class='step' >
+    
+<p><em>That&#39;s it.</em> 
+&lt;!-- 
+???
+No mucking with the database. The button isn&#39;t hooked up to anything. All we&#39;re trying to do is make the test pass, line by line.
+ --&gt;</p>
+</div>
+      <div class='step' >
+    
+<p>run the test again:
+<code class='inline prettyprint'>Given I'm a logged-in User</code>...GREEN!
+<code class='inline prettyprint'>When I go to the Item Page</code>...GREEN!
+<code class='inline prettyprint'>And I tap the "Add Item to Cart" button</code>...now that&#39;ll be green too!
+<code class='inline prettyprint'>Then I should see the Cart Inventory increment</code> will fail. </p>
+</div>
+      <div class='step' >
+    
+<p>wire the <code class='inline prettyprint'><button></code> you just made in the front-end view up to the database, so that the Cart Inventory increments. </p>
+</div>
+      <div class='step' >
+    
+<p>Then we&#39;ll run the test again, the <code class='inline prettyprint'>Cart Inventory</code> line will pass, then next line (<code class='inline prettyprint'>Cart Sub-Total</code>) will fail, you&#39;ll make it pass, etc. etc. </p>
+</div>
+      <div class='step' >
+    
+<p>In this manner, the whole feature will be written according to a plain-Engish User Story that anyone can read—including a non-technical Product Manager or client stakeholder—without any over-engineering or extra work.</p>
+</div>
+      <div class='step' >
+    
+<h3>Running Suite</h3>
+
+<!--
+???
+Now here's the fun part. Remember how we said we already built the User Login system and the Item Page? Those features will have tests too. In fact, close to 100% of the codebase is under test. So now that we've TDD'd a new feature and it's test is green, we'll run the entire Test Suite—every test that's been written to date. We already know that our feature works on its own, but now we'll get to see whether it integrates with the rest of the software.
+-->
+</div>
+      <div class='step' >
+    
+<p>We&#39;ll kick off the full test run, and it&#39;ll take a few minutes to run all the tests. Now&#39;s a great time to get up, stretch our legs, grab a drink, maybe play a game of ping pong. When we return, the test suite is red! It turns out that when we decremented Warehouse Inventory, we broke part of the warehouse management system that had already been written. Now we&#39;ll go fix our code (writing additional tests as necessary) and repeat the process until the test suite is green. Once suite is green, we can push our code to production with confidence that the software will act as expected. In this manner, we mitigate technical risks and let deployment be a purely business decision.</p>
+
+<h1><Interlude>: TDD &amp; Pairing</h1>
+</div>
+      <div class='step' >
+    
+<h2>Ping Pong Pairing</h2>
+
+<ul>
+<li>How does it work?</li>
+<li>how would TDD help Design Pairing?</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h1></End Interlude></h1>
 </div>
       <div class='step' >
     
@@ -289,16 +398,18 @@ Unit</p>
 </div>
       <div class='step' >
     
-<!-- not sure where this goes ; do we need to talk about storywriting? maybe storymaypping?-->
+<!-- not sure where this goes ; do we need to talk about storywriting? maybe storymapping?-->
 
 <h2>I.N.V.E.S.T.</h2>
 
-<p>Independent: maybe?
-Negotiable: yes!
-Valuable: yes!
-Estimatable: in theory, yes
-Small: maybe?
-Testable: working on that now</p>
+<ul>
+<li>Independent: maybe?</li>
+<li>Negotiable: yes!</li>
+<li>Valuable: yes!</li>
+<li>Estimatable: in theory, yes</li>
+<li>Small: maybe?</li>
+<li>Testable: working on that now</li>
+</ul>
 </div>
       <div class='step' >
     
@@ -315,31 +426,31 @@ Testable: working on that now</p>
 </div>
       <div class='step' >
     
-<p>We believe designers have a problem </p>
+<p>We believe designers have a problem</p>
 
 <p><em>refactoring the messes of CSS that metastasize once a project gets past the early phases.</em></p>
 
-<p>We can help them with </p>
+<p>We can help them with</p>
 
 <h2>a tool that provides for refactoring CSS with impunity.</h2>
 
-<p>We&#39;ll know we&#39;re right </p>
+<p>We&#39;ll know we&#39;re right</p>
 
 <p><em>if Latter-Day Stylesheets become less of a problem (we can test this on our own codebases).</em></p>
 </div>
       <div class='step' >
     
-<p>We believe designers suffer from </p>
+<p>We believe designers suffer from</p>
 
 <h2>unintended design regressions</h2>
 
-<p>(especially in responsive designs) when changes in one part of the codebase unexpectedly affect another. </p>
+<p>(especially in responsive designs) when changes in one part of the codebase unexpectedly affect another.</p>
 
 <p>We can help them with a tool that craws the whole app and announces if anything&#39;s changed.</p>
 </div>
       <div class='step' >
     
-<p>We believe designers suffer from the </p>
+<p>We believe designers suffer from the</p>
 
 <h2><em>fear</em> of unintended design regressions,</h2>
 
@@ -353,7 +464,7 @@ Testable: working on that now</p>
 
 <p>*We can fix this *</p>
 
-<p>with a practice of Test-Driven Design, where &quot;done&quot; can be INVESTED up-front. </p>
+<p>with a practice of Test-Driven Design, where &quot;done&quot; can be INVESTED up-front.</p>
 
 <p><em>We&#39;ll know we&#39;re right</em></p>
 
@@ -493,13 +604,17 @@ more than just pretty pictures</p>
 </div>
       <div class='step' >
     
+<h1>From TDD Lunch Talk</h1>
+
 <h2>The Pain</h2>
 
 <ul>
 <li>Conversation started w/ numerical formatting: neg numbers red w/ parens, positive numbers w/ green, etc (cactus would fix this)</li>
 <li>layout broke w/ an experimental class leaking out to another DOM element, absolute positioning broke a page (GO would fix this)</li>
 </ul>
-
+</div>
+      <div class='step' >
+    
 <h2>The Plan</h2>
 
 <ul>
@@ -509,7 +624,9 @@ more than just pretty pictures</p>
 <li>put Acknowledger page under screenshotting test</li>
 <li>report back to Automated Design Test Working Group</li>
 </ul>
-
+</div>
+      <div class='step' >
+    
 <h1>Goals / Benefits</h1>
 
 <p>Automated design testing can address a number of design pains, e.g.:</p>
@@ -525,13 +642,17 @@ more than just pretty pictures</p>
 <li>ensure modules are implemented w/ proper DOM</li>
 <li>explicitly assert design decisions</li>
 </ul>
-
-<h1>Risks</h1>
+</div>
+      <div class='step' >
+    
+<h2>Risks</h2>
 
 <ul>
 <li>adding overhead to team flow</li>
 </ul>
-
+</div>
+      <div class='step' >
+    
 <h2>Errata</h2>
 
 <ul>
@@ -547,13 +668,17 @@ more than just pretty pictures</p>
 <li>&quot;Catastrophic cactus test&quot;: assert against total failure, e.g. cards collapsing to 0 width.</li>
 <li>TDD w/ GO: create a mock in the browser w/ firebug, use it as the reference for GO to run against</li>
 </ul>
-
+</div>
+      <div class='step' >
+    
 <h2>TODO</h2>
 
 <ul>
 <li>send Github image diffing to Interesting</li>
 </ul>
-
+</div>
+      <div class='step' >
+    
 <h1>Resources</h1>
 
       </div>
