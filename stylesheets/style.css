@@ -6,7 +6,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,400,900);
 
 body { 
-	font-family: 'Droid Serif'
+  font-family: 'Droid Serif'
 }
 
 h1, h2, h3 {
@@ -16,13 +16,13 @@ h1, h2, h3 {
 
 .remark-code,
 .remark-inline-code { 
-	font-family: 'Ubuntu Mono'; 
+  font-family: 'Ubuntu Mono'; 
 }
 
 /* ###### Custom Styles */
 
 body { 
-	font-family: 'Helvetica'
+  font-family: 'Helvetica'
 }
 
 h1, h2, h3 {
@@ -33,7 +33,7 @@ h1, h2, h3 {
 .remark-slide-footer {
   font-family: "Lato", sans-serif;
   font-weight: 100;
-	position: absolute;
+  position: absolute;
   bottom: 0;
   background-color: #222;
   color: #fcfcfc;
@@ -45,24 +45,24 @@ h1, h2, h3 {
 
 .footer a,
 .footer a:visited {
-	text-decoration: none;
-	color: #fcfcfc;
+  text-decoration: none;
+  color: #fcfcfc;
 }
 
 .remark-slide-footer .logo {
-	position: absolute;
-	left: 1em;
-	
+  position: absolute;
+  left: 1em;
+  
 }
 .remark-slide-footer .twitter {
   position: absolute;
   left: 44%;
   line-height: 3em;
-	
+  
 }
 .remark-slide-footer .hashtag {
-	position: absolute;
-	right: 1em;
+  position: absolute;
+  right: 1em;
   line-height: 3em;
 }
 
@@ -125,10 +125,51 @@ code {
   z-index: 999;
 }
 
+/* Two-column layout */
+.left-column {
+  color: #777;
+  width: 20%;
+  height: 92%;
+  float: left;
+}
+
+.left-column h2:last-of-type, 
+.left-column h3:last-child {
+  color: #000;
+}
+
+.right-column {
+  width: 75%;
+  float: right;
+  padding-top: 1em;
+}
+
+/******************* JPB styling classes  */
+
 .green {
-	color: #859900;
+  color: #859900;
 }
 
 .red {
-	color: #dc322f;
+  color: #dc322f;
+}
+
+.em {
+  font-size: 2em;
+  display: block;
+}
+
+.interlude {
+  background: #272822;
+  color: #777872;
+  text-shadow: 0 0 20px #333;
+}
+.interlude h1, 
+.interlude h2 {
+  color: #f3f3f3;
+  line-height: 0.8em;
+}
+
+.small-image img{
+  width: 40%;
 }
