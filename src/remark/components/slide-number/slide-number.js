@@ -5,10 +5,9 @@ function SlideNumberViewModel (slide, slideshow) {
 
   self.slide = slide;
   self.slideshow = slideshow;
-
   var footer =
     '<div class="logo"><img class="mce-logo" src="../images/MCE_logo.png" width="220px" img=""></div>'+
-    '<div class="twitter"><span>@jonathanpberger</span></div>'+
+    '<div class="twitter"><span>@jonathanpberger bar</span></div>'+
     '<div class="hashtag"><span>#mceconf</span></div>';
   self.element = document.createElement('div');
   self.element.className = 'remark-slide-footer';
